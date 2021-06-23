@@ -119,15 +119,18 @@ jQuery(document).ready(function($){
 
 $(document).ready(function(){
     $(".close-btn").click(function(){
-      $("#popup").addClass("dispaly-none");
+        $("#popup").addClass("dispaly-none");
+        $("#popup").removeClass("dispaly-block");
     });
 
     console.log('close');
 });
   
-$(document).ready(function(){
-    $(".open-popup").click(function(){
-      $("#popup").addClass("dispaly-block");
-    });
-    console.log('open');
-  });
+// $(document).ready(function(){
+//     $(".map-point__item--1").click(function () {
+//         $("#popup").removeClass("dispaly-none");
+//         $("#popup").addClass("dispaly-block");
+//     });
+    
+//     console.log('open');
+//   });
