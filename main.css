@@ -161,7 +161,7 @@ img {
 }
 
 .map-point--desert {
-  right: 0;
+  right: -32px;
   top: 0;
 }
 
@@ -172,6 +172,7 @@ img {
   background-color: #c50000;
   border: 5px solid #fff;
   position: absolute;
+  cursor: pointer;
 }
 
 .map-point__item--1 {

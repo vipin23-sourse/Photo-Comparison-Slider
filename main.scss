@@ -207,9 +207,11 @@ Primary style
       width: 100vw;
       height: 100%;
       z-index: 4;
+  
+     
 
       &--desert{
-         right: 0;
+         right: -32px;
          top: 0;
       }
 
@@ -220,6 +222,7 @@ Primary style
           background-color: #c50000;
           border: 5px solid #fff;
           position: absolute;
+          cursor: pointer;
          
 
           &--1{
