@@ -115,3 +115,19 @@ jQuery(document).ready(function($){
         }
     }
 });
+
+
+$(document).ready(function(){
+    $(".close-btn").click(function(){
+      $("#popup").addClass("dispaly-none");
+    });
+
+    console.log('close');
+});
+  
+$(document).ready(function(){
+    $(".open-popup").click(function(){
+      $("#popup").addClass("dispaly-block");
+    });
+    console.log('open');
+  });

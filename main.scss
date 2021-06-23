@@ -208,8 +208,6 @@ Primary style
       height: 100%;
       z-index: 4;
   
-     
-
       &--desert{
          right: -32px;
          top: 0;
@@ -223,6 +221,40 @@ Primary style
           border: 5px solid #fff;
           position: absolute;
           cursor: pointer;
+
+          &__content{
+              bottom: -2rem;
+              left: 50%;
+              transform: translateX(-50%);
+              text-align: center;
+              position: absolute;
+              width: 9rem;
+
+              .close-btn{
+                  cursor: pointer;
+                  display: block;
+                  padding: .2rem;
+              }
+
+              &__title{
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  display: block;
+
+              }
+
+              &__info{
+                  font-size: 1rem;
+                  display: block;
+                  padding: .2rem;
+
+              }
+
+              img{
+                  border: 1px solid #fff;
+              }
+
+          }
          
 
           &--1{
@@ -254,4 +286,12 @@ Primary style
             right: 19rem;
           }
       }
+  }
+
+  .dispaly-none{
+    display: none;
+  }
+
+  .dispaly-block{
+    display: block;
   }
