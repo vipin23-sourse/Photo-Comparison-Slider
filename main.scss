@@ -199,5 +199,56 @@ Primary style
       flex-direction: column;
       justify-content: space-between;
   }
+
+
   
-  
+  .map-point{
+      position: fixed;
+      width: 100vw;
+      height: 100%;
+      z-index: 4;
+
+      &--desert{
+         right: 0;
+         top: 0;
+      }
+
+      &__item{
+          width: 1.8rem;
+          height: 1.8rem;
+          border-radius: 50%;
+          background-color: #c50000;
+          border: 5px solid #fff;
+          position: absolute;
+         
+
+          &--1{
+            top: 11rem;
+            left: 20rem;
+          }
+
+          &--2{
+            bottom: 8rem;
+            left: 27rem;
+          }
+
+          &--3{
+            top: 18rem;
+            left: 40rem;
+          }
+
+          &--4{
+            bottom: 10rem;
+            right: 45rem;
+          }
+
+          &--5{
+            bottom: 4rem;
+            right: 28rem;
+          }
+          &--6{
+            top: 10rem;
+            right: 19rem;
+          }
+      }
+  }
