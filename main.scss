@@ -220,6 +220,9 @@ Primary style
         padding: 5px;
         font-size: 14px;
       }
+      @media(max-width:380px){
+       font-size: 12px;
+       }
   }
 
   .latu{
@@ -269,7 +272,7 @@ Primary style
        }
   
       &--desert{
-        right:4px;
+        right:0;
         top: 0;
         left: unset;
     }
@@ -294,10 +297,10 @@ Primary style
               transform: translateX(-50%);
               text-align: center;
               position: relative;
-              width: 9rem;
+              width: 10rem;
               z-index: 99;
               height: 2rem;
-              display: none;
+              display: block;
 
               .close-btn{
                   cursor: pointer;
@@ -338,9 +341,22 @@ Primary style
                 top: 115px;
                 left: 222px;
              }
+             @media(max-width:1000px){
+              top: 96px;
+              left: 141px;
+           }
             @media(max-width:767px){
               top: 47px;
             left: 3rem;
+             }
+
+             @media(max-width:450px){
+              top: 50px;
+              left: 95px;
+             }
+             @media(max-width:380px){
+              top: 42px;
+              left: 84px;
              }
           }
 
@@ -355,9 +371,22 @@ Primary style
               bottom: 63px;
               left: 311px;
              }
+             @media(max-width:1000px){
+              bottom: 33px;
+              left: 217px;
+             }
             @media(max-width:767px){
               bottom: 65px;
               left: 354px;
+             }
+
+             @media(max-width:450px){
+              bottom: 20px;
+              left: 126px;
+             }
+             @media(max-width:380px){
+                bottom: 17px;
+                left: 104px;
              }
           }
 
@@ -371,10 +400,24 @@ Primary style
              @media(max-width:1200px){
               top: 206px;
               left: 415px;}
+              @media(max-width:1000px){
+                top: 135px;
+                left: 282px;
+              }
             @media(max-width:767px){
               top: unset;
               left: 4rem;
               bottom: 51px;
+             }
+             @media(max-width:450px){
+              top: unset;
+              left: 168px;
+              bottom: 77px;
+             }
+             @media(max-width:380px){
+              top: unset;
+              left: 142px;
+              bottom: 68px;
              }
           }
 
@@ -389,9 +432,23 @@ Primary style
               top: 307px;
               left: 511px;
              }
+             @media(max-width:1000px){
+              top: 232px;
+              left: 347px;
+             }
             @media(max-width:767px){
               top: 3rem;
             right: 6rem;
+             }
+             @media(max-width:450px){
+              top: 127px;
+              left: 213px;
+              right: unset;
+             }
+             @media(max-width:380px){
+              top: 98px;
+              left: 182px;
+              right: unset;
              }
           }
 
@@ -406,10 +463,23 @@ Primary style
               bottom: 19px;
               right: 266px;
              }
+             @media(max-width:1000px){
+              bottom: 6px;
+              right: 147px;
+             }
             @media(max-width:767px){
               top: 2rem;
             right: 8rem;
              }
+
+             @media(max-width:450px){
+              top: 145px;
+              right: 115px;
+             }
+             @media(max-width:380px){
+              top: 122px;
+              right: 113px;
+                       }
           }
           &--6{
             top: 10rem;
@@ -422,9 +492,22 @@ Primary style
               top: 100px;
               right: 152px;
              }
+             @media(max-width:1000px){
+              top: 55px;
+              right: 103px;
+             }
             @media(max-width:767px){
               top: 3rem;
             right: 3rem;
+             }
+
+             @media(max-width:450px){
+              top: 39px;
+              right: 106px;
+             }
+             @media(max-width:380px){
+              top: 30px;
+              right: 86px;
              }
           }
   }
