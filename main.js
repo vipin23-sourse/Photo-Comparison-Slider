@@ -55,7 +55,7 @@ jQuery(document).ready(function($){
 
     //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
     function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-        dragElement.on("mousedown vmousedown", function(e) {
+        dragElement.on("mousedown vmousedown touchstart", function(e) {
             dragElement.addClass('draggable');
             resizeElement.addClass('resizable');
 
@@ -66,14 +66,14 @@ jQuery(document).ready(function($){
                 minLeft = containerOffset + 10,
                 maxLeft = containerOffset + containerWidth - dragWidth - 10;
             
-            dragElement.parents().on("mousemove vmousemove", function(e) {
+            dragElement.parents().on("mousemove vmousemove touchmove", function(e) {
                 if( !dragging) {
                     dragging =  true;
                     ( !window.requestAnimationFrame )
                         ? setTimeout(function(){animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement);}, 100)
                         : requestAnimationFrame(function(){animateDraggedHandle(e, xPosition, dragWidth, minLeft, maxLeft, containerOffset, containerWidth, resizeElement, labelContainer, labelResizeElement);});
                 }
-            }).on("mouseup vmouseup", function(e){
+            }).on("mouseup vmouseup touchend touchcancel", function(e){
                 dragElement.removeClass('draggable');
                 resizeElement.removeClass('resizable');
             });
@@ -95,7 +95,7 @@ jQuery(document).ready(function($){
 
         var widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
         
-        $('.draggable').css('left', widthValue).on("mouseup vmouseup", function() {
+        $('.draggable').css('left', widthValue).on("mouseup vmouseup touchend touchcancel", function() {
             $(this).removeClass('draggable');
             resizeElement.removeClass('resizable');
         });
@@ -118,14 +118,42 @@ jQuery(document).ready(function($){
 
 
 $(document).ready(function(){
-    $(".close-btn").click(function(){
-        $("#popup").addClass("dispaly-none");
-        $("#popup").removeClass("dispaly-block");
+    $(".close-btn").click(function(e){
+        e.stopPropagation()
+        $(this).parent().hide()
     });
-
-    console.log('close');
+    $(".map-point__item").click(function(){
+        $(this).find('.map-point__item__content').show()
+    });
+    // for touch events
+    init()
 });
-  
+
+
+function touchHandler(event) {
+    var touch = event.changedTouches[0];
+
+    var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+    }[event.type], true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+
+    touch.target.dispatchEvent(simulatedEvent);
+    // event.preventDefault();
+}
+
+function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}
+
 // $(document).ready(function(){
 //     $(".map-point__item--1").click(function () {
 //         $("#popup").removeClass("dispaly-none");

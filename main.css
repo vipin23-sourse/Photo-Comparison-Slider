@@ -65,6 +65,12 @@ img {
   }
 }
 
+@media (max-width: 450px) {
+  .cd-image-container {
+    width: 100%;
+  }
+}
+
 @media (min-width: 1500px) {
   .cd-image-container {
     max-width: 1500px;
@@ -198,13 +204,17 @@ img {
   }
 }
 
+.temp--end {
+  align-self: flex-end;
+}
+
 .latu span {
   display: block;
 }
 
 @media (max-width: 767px) {
   .latu {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
@@ -244,7 +254,7 @@ img {
 
 @media (max-width: 767px) {
   .map-point {
-    width: 100vw;
+    width: 96vw;
   }
 }
 
@@ -252,6 +262,18 @@ img {
   right: 0;
   top: 0;
   left: unset;
+}
+
+@media (max-width: 450px) {
+  .map-point--desert {
+    right: -15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .map-point--desert {
+    right: -17px;
+  }
 }
 
 .map-point__item {
@@ -278,10 +300,29 @@ img {
   transform: translateX(-50%);
   text-align: center;
   position: relative;
-  width: 9rem;
+  width: 11rem;
   z-index: 99;
   height: 2rem;
   display: block;
+}
+
+@media (max-width: 1500px) {
+  .map-point__item__content {
+    bottom: 6rem;
+  }
+}
+
+@media (max-width: 1500px) {
+  .map-point__item__content {
+    bottom: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item__content {
+    bottom: 2rem;
+    width: 4rem;
+  }
 }
 
 .map-point__item__content .close-btn {
@@ -296,10 +337,22 @@ img {
   display: block;
 }
 
+@media (max-width: 767px) {
+  .map-point__item__content__title {
+    font-size: 12px;
+  }
+}
+
 .map-point__item__content__info {
   font-size: 1rem;
   display: block;
   padding: .2rem;
+}
+
+@media (max-width: 767px) {
+  .map-point__item__content__info {
+    font-size: 10px;
+  }
 }
 
 .map-point__item__content img {

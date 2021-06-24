@@ -60,6 +60,10 @@ Primary style
       width: 700px;
      }
 
+     @media(max-width:450px){
+      width: 100%;
+     }
+
      @media(min-width:1500px){
       max-width: 1500px;
      }
@@ -223,6 +227,10 @@ Primary style
       @media(max-width:380px){
        font-size: 12px;
        }
+
+       &--end{
+         align-self: flex-end;
+       }
   }
 
   .latu{
@@ -230,7 +238,7 @@ Primary style
           display: block;
       }
       @media(max-width:767px){
-        font-size: 14px;
+        font-size: 10px;
       }
   }
 
@@ -268,13 +276,20 @@ Primary style
     
 
       @media(max-width:767px){
-        width: 100vw;
+        width: 96vw;
        }
   
       &--desert{
         right:0;
         top: 0;
         left: unset;
+        @media(max-width:450px){
+          right: -15px;
+        }
+
+        @media(max-width:400px){
+          right: -17px;
+        }
     }
       
 
@@ -297,10 +312,22 @@ Primary style
               transform: translateX(-50%);
               text-align: center;
               position: relative;
-              width: 9rem;
+              width: 11rem;
               z-index: 99;
               height: 2rem;
               display: block;
+              @media(max-width:1500px){
+                bottom: 6rem;
+                
+              }
+              @media(max-width:1500px){
+                bottom: 4rem;
+                
+              }
+              @media(max-width:767px){
+                bottom: 2rem;
+                width: 4rem;
+              }
 
               .close-btn{
                   cursor: pointer;
@@ -312,6 +339,9 @@ Primary style
                   font-size: 1.1rem;
                   font-weight: 600;
                   display: block;
+                  @media(max-width:767px){
+                   font-size: 12px;
+                  }
 
               }
 
@@ -319,6 +349,10 @@ Primary style
                   font-size: 1rem;
                   display: block;
                   padding: .2rem;
+                  @media(max-width:767px){
+                    font-size: 10px;
+                   }
+ 
 
               }
 
