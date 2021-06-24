@@ -278,7 +278,7 @@ img {
   transform: translateX(-50%);
   text-align: center;
   position: relative;
-  width: 10rem;
+  width: 9rem;
   z-index: 99;
   height: 2rem;
   display: block;
@@ -451,8 +451,8 @@ img {
 }
 
 .map-point__item--4 {
-  bottom: 10rem;
-  right: 45rem;
+  bottom: 7rem;
+  right: 44rem;
 }
 
 @media (max-width: 1500px) {
