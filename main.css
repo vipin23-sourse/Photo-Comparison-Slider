@@ -24,6 +24,23 @@ img {
   max-width: 100%;
 }
 
+.container {
+  margin: 0 auto;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
 /* -------------------------------- 
   
   Main components 
@@ -34,6 +51,24 @@ img {
   width: 100%;
   max-width: 100%;
   margin: 0em auto;
+}
+
+@media (max-width: 1200px) {
+  .cd-image-container {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cd-image-container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .cd-image-container {
+    max-width: 1500px;
+  }
 }
 
 .cd-image-container img {
@@ -54,6 +89,12 @@ img {
   opacity: 0;
   transform: translateY(20px);
   transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
+}
+
+@media (max-width: 767px) {
+  .cd-image-label {
+    padding: 5px;
+  }
 }
 
 .cd-image-label.is-hidden {
@@ -112,6 +153,7 @@ img {
 
 .cd-handle {
   position: absolute;
+  z-index: 99;
   height: 44px;
   width: 44px;
   /* center the element */
@@ -143,26 +185,67 @@ img {
   border: 1px solid #fff;
 }
 
+@media (max-width: 767px) {
+  .temp {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
 .latu span {
   display: block;
+}
+
+@media (max-width: 767px) {
+  .latu {
+    font-size: 14px;
+  }
 }
 
 .cd-image-label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .map-point {
-  position: fixed;
-  width: 100vw;
+  position: absolute;
+  width: 1500px;
   height: 100%;
   z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 1500px) {
+  .map-point {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .map-point {
+    width: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point {
+    width: 100vw;
+  }
 }
 
 .map-point--desert {
-  right: -32px;
+  right: 4px;
   top: 0;
+  left: unset;
 }
 
 .map-point__item {
@@ -175,6 +258,14 @@ img {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .map-point__item {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #fff;
+  }
+}
+
 .map-point__item__content {
   bottom: 10rem;
   left: 50%;
@@ -184,6 +275,7 @@ img {
   width: 9rem;
   z-index: 99;
   height: 2rem;
+  display: none;
 }
 
 .map-point__item__content .close-btn {
@@ -213,9 +305,51 @@ img {
   left: 20rem;
 }
 
+@media (max-width: 1500px) {
+  .map-point__item--1 {
+    top: 140px;
+    left: 242px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point__item--1 {
+    top: 115px;
+    left: 222px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item--1 {
+    top: 47px;
+    left: 3rem;
+  }
+}
+
 .map-point__item--2 {
   bottom: 8rem;
   left: 27rem;
+}
+
+@media (max-width: 1500px) {
+  .map-point__item--2 {
+    bottom: 91px;
+    left: 360px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point__item--2 {
+    bottom: 63px;
+    left: 311px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item--2 {
+    bottom: 65px;
+    left: 354px;
+  }
 }
 
 .map-point__item--3 {
@@ -223,9 +357,52 @@ img {
   left: 40rem;
 }
 
+@media (max-width: 1500px) {
+  .map-point__item--3 {
+    top: 232px;
+    left: 511px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point__item--3 {
+    top: 206px;
+    left: 415px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item--3 {
+    top: unset;
+    left: 4rem;
+    bottom: 51px;
+  }
+}
+
 .map-point__item--4 {
   bottom: 10rem;
   right: 45rem;
+}
+
+@media (max-width: 1500px) {
+  .map-point__item--4 {
+    bottom: 126px;
+    right: 535px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point__item--4 {
+    top: 307px;
+    left: 511px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item--4 {
+    top: 3rem;
+    right: 6rem;
+  }
 }
 
 .map-point__item--5 {
@@ -233,9 +410,51 @@ img {
   right: 28rem;
 }
 
+@media (max-width: 1500px) {
+  .map-point__item--5 {
+    bottom: 40px;
+    right: 323px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point__item--5 {
+    bottom: 19px;
+    right: 266px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item--5 {
+    top: 2rem;
+    right: 8rem;
+  }
+}
+
 .map-point__item--6 {
   top: 10rem;
   right: 19rem;
+}
+
+@media (max-width: 1500px) {
+  .map-point__item--6 {
+    top: 100px;
+    right: 189px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-point__item--6 {
+    top: 100px;
+    right: 152px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-point__item--6 {
+    top: 3rem;
+    right: 3rem;
+  }
 }
 
 .dispaly-none {
